@@ -1,6 +1,5 @@
 package ninja.sakib.absec;
 
-import com.eclipsesource.json.JsonObject;
 import ninja.sakib.absec.providers.ABSecProvider;
 import ninja.sakib.absec.providers.DefaultABSecProvider;
 
@@ -19,12 +18,7 @@ public class Main {
         ABSecProvider secProvider = new DefaultABSecProvider("SampleEncryptionKey");
         ABSecFactory secFactory = new ABSecFactory(secProvider);
 
-        JsonObject params = new JsonObject();
-        params.add("name", "Sakib Sami");
-        params.add("age", "23");
-
-        System.out.println(factory.encrypt(params.toString()));
-        System.out.println(secFactory.decrypt(factory.encrypt(params.toString())));
-
+        System.out.println(factory.encrypt("Hello-World"));
+        System.out.println(secFactory.decrypt(factory.encrypt("Hello-World")));
     }
 }
