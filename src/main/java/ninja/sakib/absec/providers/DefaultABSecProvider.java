@@ -1,10 +1,10 @@
 package ninja.sakib.absec.providers;
 
-import com.eclipsesource.json.Json;
-import com.eclipsesource.json.JsonObject;
+import ninja.sakib.absec.security.AESAlgorithm;
 
-import java.util.HashMap;
-import java.util.Map;
+import javax.crypto.BadPaddingException;
+import javax.crypto.IllegalBlockSizeException;
+import java.io.UnsupportedEncodingException;
 
 /**
  * := Coded with love by Sakib Sami on 11/21/16.
@@ -14,47 +14,27 @@ import java.util.Map;
  */
 
 public class DefaultABSecProvider implements ABSecProvider {
-    private int MATCH_LENGTH = 16;
-    private int MATCH_DISTANCE = 2;
+    private AESAlgorithm aesAlgorithm;
 
-    public String encrypt(Map<String, String> params) {
-        JsonObject data = new JsonObject();
-        for (Map.Entry<String, String> entry : params.entrySet()) {
-            data.add(entry.getKey(), entry.getValue());
-        }
-
-        long dataLength = data.toString().length();
-        String dataAsString = data.toString();
-        StringBuilder dataStringBuilder = new StringBuilder();
-        for (int i = 0; i < dataLength; i++) {
-            if (i % MATCH_DISTANCE == 0) {
-                int charIndex = dataAsString.charAt(i);
-                dataStringBuilder.append((char) (charIndex + MATCH_LENGTH));
-            } else {
-                dataStringBuilder.append(dataAsString.charAt(i));
-            }
-        }
-        return dataStringBuilder.toString();
+    public DefaultABSecProvider(String secretKey) {
+        aesAlgorithm = new AESAlgorithm(secretKey);
     }
 
-    public Map<String, String> decrypt(String encrypted) {
-        long dataLength = encrypted.length();
-        StringBuilder dataStringBuilder = new StringBuilder();
-        for (int i = 0; i < dataLength; i++) {
-            if (i % MATCH_DISTANCE == 0) {
-                int charIndex = encrypted.charAt(i);
-                dataStringBuilder.append((char) (charIndex - MATCH_LENGTH));
-            } else {
-                dataStringBuilder.append(encrypted.charAt(i));
-            }
+    public String encrypt(String plainData) {
+        try {
+            return aesAlgorithm.encrypt(plainData);
+        } catch (BadPaddingException | IllegalBlockSizeException e) {
+            e.printStackTrace();
         }
+        return null;
+    }
 
-        Map<String, String> params = new HashMap<>();
-        JsonObject jsonData = Json.parse(dataStringBuilder.toString()).asObject();
-        for (String name : jsonData.names()) {
-            params.put(name, jsonData.getString(name, ""));
+    public String decrypt(String encrypted) {
+        try {
+            return aesAlgorithm.decrypt(encrypted);
+        } catch (BadPaddingException | IllegalBlockSizeException | UnsupportedEncodingException e) {
+            e.printStackTrace();
         }
-
-        return params;
+        return null;
     }
 }
