@@ -8,11 +8,11 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/fileSnapshots.bin" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/outputFileStates.bin" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.gradle/2.9/taskArtifacts/taskArtifacts.bin" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ninja/sakib/absec/ABSecFactory.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ninja/sakib/absec/providers/ABSecProvider.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/main/ninja/sakib/absec/providers/DefaultABSecProvider.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/build/classes/test/ninja/sakib/absec/Main.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ABSec.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1235,7 +1235,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479712404609</updated>
-      <workItem from="1479712418724" duration="9165000" />
+      <workItem from="1479712418724" duration="9377000" />
     </task>
     <task id="LOCAL-00001" summary="AES encryption implemented">
       <created>1479734153397</created>
@@ -1258,11 +1258,18 @@
       <option name="project" value="LOCAL" />
       <updated>1479735093021</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="refactored">
+      <created>1479735282506</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1479735282506</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9165000" />
+    <option name="totallyTimeSpent" value="9377000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="724" extended-state="6" />
@@ -1329,7 +1336,8 @@
     <MESSAGE value="AES encryption implemented" />
     <MESSAGE value="example added" />
     <MESSAGE value="example updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="example updated" />
+    <MESSAGE value="refactored" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
