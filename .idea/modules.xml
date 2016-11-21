@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ABSec.iml" filepath="$PROJECT_DIR$/.idea/modules/ABSec.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ABSec_main.iml" filepath="$PROJECT_DIR$/.idea/modules/ABSec_main.iml" group="ABSec" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/ABSec_test.iml" filepath="$PROJECT_DIR$/.idea/modules/ABSec_test.iml" group="ABSec" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/absec.iml" filepath="$PROJECT_DIR$/.idea/modules/absec.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/absec_main.iml" filepath="$PROJECT_DIR$/.idea/modules/absec_main.iml" group="absec" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/absec_test.iml" filepath="$PROJECT_DIR$/.idea/modules/absec_test.iml" group="absec" />
     </modules>
   </component>
 </project>

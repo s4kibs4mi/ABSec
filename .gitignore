@@ -1,5 +1,3 @@
-# Created by .ignore support plugin (hsz.mobi)
-.gitignore
-build/
 .gradle/
 .idea/workspace.xml
+build/

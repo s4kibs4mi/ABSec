@@ -18,9 +18,9 @@
         <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="ABSec_main" target="1.8" />
-      <module name="ABSec_test" target="1.8" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="absec_main" target="1.8" />
+      <module name="absec_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
