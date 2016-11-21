@@ -1,0 +1,14 @@
+group 'ninja.sakib'
+version '0.1'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "com.eclipsesource.minimal-json:minimal-json:0.9.4"
+
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+}
