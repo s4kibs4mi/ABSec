@@ -13,10 +13,10 @@ import ninja.sakib.absec.providers.DefaultABSecProvider;
 
 public class Main {
     public static void main(String args[]) {
-        ABSecProvider provider = new DefaultABSecProvider("Bar");
+        ABSecProvider provider = new DefaultABSecProvider("SampleEncryptionKey");
         ABSecFactory factory = new ABSecFactory(provider);
 
-        ABSecProvider secProvider = new DefaultABSecProvider("Bar");
+        ABSecProvider secProvider = new DefaultABSecProvider("SampleEncryptionKey");
         ABSecFactory secFactory = new ABSecFactory(secProvider);
 
         JsonObject params = new JsonObject();
