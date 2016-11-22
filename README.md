@@ -43,7 +43,7 @@ allprojects {
 }
 
 dependencies {
-    compile 'ninja.sakib:ABSec:v0.2'
+    compile 'ninja.sakib:ABSec:v0.4'
 }
 ```
 
@@ -59,8 +59,8 @@ Maven
 <dependency>
     <groupId>ninja.sakib</groupId>
     <artifactId>ABSec</artifactId>
-    <version>v0.2</version>
+    <version>v0.4</version>
 </dependency>
 ```
 
-[And more...](https://jitpack.io/#ninja.sakib/ABSec/v0.2)
+[And more...](https://jitpack.io/#ninja.sakib/ABSec/v0.4)
